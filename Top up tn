@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up TN - Services en ligne</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 35px 20px;
+  background: #111827;
+}
+
+header h1 {
+  color: #38bdf8;
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+.hero {
+  padding: 50px 20px 25px;
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #94a3b8;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 28px 20px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #0004;
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.card p {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+button {
+  background: #38bdf8;
+  color: #082f49;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #7dd3fc;
+}
+
+.contact {
+  padding: 45px 20px;
+}
+
+.contact h2 {
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: #cbd5e1;
+}
+
+.contact button {
+  margin-top: 18px;
+}
+
+footer {
+  padding: 20px;
+  background: #111827;
+  color: #64748b;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>TOP UP TN</h1>
+  <p>Vos services en ligne, rapidement et simplement</p>
+</header>
+
+<section class="hero">
+  <h2>Nos Services</h2>
+  <p>Choisissez le service dont vous avez besoin</p>
+</section>
+
+<section class="services">
+
+  <div class="card">
+    <h3>🎮 Gaming</h3>
+    <p>Top Up Free Fire, PES et autres jeux</p>
+    <button onclick="commander('Gaming')">Commander</button>
+  </div>
+
+  <div class="card">
+    <h3>📱 Recharge</h3>
+    <p>Recharge téléphonique et services mobiles</p>
+    <button onclick="commander('Recharge')">Commander</button>
+  </div>
+
+  <div class="card">
+    <h3>💻 Services Digitaux</h3>
+    <p>Abonnements et services en ligne</p>
+    <button onclick="commander('Services Digitaux')">Commander</button>
+  </div>
+
+</section>
+
+<section class="contact">
+  <h2>Besoin d'un service ?</h2>
+  <p>Contactez-nous directement sur WhatsApp</p>
+  <a id="whatsapp" href="#" target="_blank">
+    <button>Contacter WhatsApp</button>
+  </a>
+</section>
+
+<footer>
+  © 2026 Top Up TN - Tous droits réservés
+</footer>
+
+<script>
+const numero = "94235037"; // بدّل هذا برقمك
+
+function commander(service) {
+  const message = "Bonjour, je veux commander le service: " + service;
+  const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+}
+
+document.getElementById("whatsapp").href =
+  "https://wa.me/" + numero;
+</script>
+
+</body>
+</html>
